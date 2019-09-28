@@ -8,7 +8,7 @@ $password="";
 $address ="";
 $errors=[];
 
-    $db = mysqli_connect('localhost', 'root', '', 'digitaldashboard');
+    $db = mysqli_connect('localhost', 'root', '', 'DigitalDashboard');
   // receive all input values from the form
   $name = mysqli_real_escape_string($db, $_POST['name']);
   $email = mysqli_real_escape_string($db, $_POST['email']);
@@ -27,7 +27,7 @@ $errors=[];
 
   // first check the database to make sure 
   // a user does not already exist with the same username and/or email
-  $user_check_query = "SELECT * FROM emloyeedetails WHERE eUsername='$email' OR eEmail='$email' LIMIT 1";
+  $user_check_query = "SELECT * FROM emloyeeDetails WHERE eUsername='$email' OR eEmail='$email' LIMIT 1";
   $result = mysqli_query($db, $user_check_query);
   $user = mysqli_fetch_assoc($result);
   
@@ -44,7 +44,7 @@ $errors=[];
   // Finally, register user if there are no errors in the form
   if (count($errors) == 0) {
   	
-  	$query = "INSERT INTO emloyeedetails (eName,eUsername,ePassword, eEmail, ePhone,eAddress) 
+  	$query = "INSERT INTO emloyeeDetails (eName,eUsername,ePassword, eEmail, ePhone,eAddress) 
   			  VALUES('$name', '$email', '$password','$email','$mobile','$address')";
   	mysqli_query($db, $query);
   	

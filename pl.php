@@ -79,24 +79,24 @@ body {font-family: "Lato", sans-serif;}
 </div>
 <div>
 <p></p>
-<form method="post">
+
     <div class="tab">
-    <button class="tablinks" onclick="openCity(event, 'Employee');" id="defaultOpen">Employee</button>
+    <button class="tablinks" onclick="openCity(event, 'Employee')" id="defaultOpen">Employee</button>
     <button class="tablinks" onclick="openCity(event, 'Add_Employee')">Add Employee</button>
     <button class="tablinks" onclick="openCity(event, 'View')">View_Employee</button>
     <button class="tablinks" onclick="openCity(event, 'Project_details')">Project details</button>
     <button class="tablinks" onclick="openCity(event, 'Add_Task')">Add task</button>
     </div>
-</form>
+
 <div id="Employee" class="tabcontent" >
 <?php
 function dispEmp()
 {
-    $mysqli = new mysqli("localhost", "root", "", "digitaldashboard");
+    $mysqli = new mysqli("localhost", "root", "", "DigitalDashboard");
 if($mysqli->connect_error) {
   exit('Could not connect');
 }
-$sql ="select eId,eName,eAddress from emloyeedetails";
+$sql ="select eId,eName,eAddress from emloyeeDetails";
 
 $result = $mysqli->query($sql);
 
@@ -171,7 +171,8 @@ function openCity(evt, cityName) {
     tabcontent[i].style.display = "none";
   }
   tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
+  for (i = 0; i < tablinks.length; i++) 
+  {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
   document.getElementById(cityName).style.display = "block";

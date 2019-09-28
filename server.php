@@ -7,7 +7,7 @@ $email    = "";
 $errors = array(); 
 
 // connect to the database
-$db = mysqli_connect('localhost', 'root', '', 'digitaldashboard');
+$db = mysqli_connect('localhost', 'root', '', 'DigitalDashboard');
 
 // REGISTER USER
 if (isset($_POST['reg_user'])) {
@@ -96,7 +96,7 @@ if (isset($_POST['login_leader'])) {
 
   if (count($errors) == 0) {
   	
-    $query = "SELECT pName FROM projectleader WHERE pUsername='$username' AND pPassword='$password'";
+    $query = "SELECT pName FROM projectLeader WHERE pUsername='$username' AND pPassword='$password'";
        	$results = mysqli_query($db, $query);
   	if (mysqli_num_rows($results) == 1) {
   	  $_SESSION['username'] = $username;
