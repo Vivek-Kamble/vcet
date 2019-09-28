@@ -28,7 +28,7 @@ body {font-family: "Lato", sans-serif;}
   border: 1px solid #ccc;
   background-color: #f1f1f1;
   width: 30%;
-  height: auto;
+  height: 360px;
 }
 
 /* Style the buttons inside the tab */
@@ -63,7 +63,7 @@ body {font-family: "Lato", sans-serif;}
   border: 1px solid #ccc;
   width: 70%;
   border-left: none;
-  height: 346px;
+  height: 410px;
 }
 </style>
 </head>
@@ -81,11 +81,12 @@ body {font-family: "Lato", sans-serif;}
 <p></p>
 
     <div class="tab">
-    <button class="tablinks" onclick="openCity(event, 'Employee')" id="defaultOpen">Employee</button>
-    <button class="tablinks" onclick="openCity(event, 'Add_Employee')">Add Employee</button>
-    <button class="tablinks" onclick="openCity(event, 'View')">View_Employee</button>
-    <button class="tablinks" onclick="openCity(event, 'Project_details')">Project details</button>
-    <button class="tablinks" onclick="openCity(event, 'Add_Task')">Add task</button>
+      <button class="tablinks" onclick="openCity(event, 'Employee')" id="defaultOpen">Employee</button>
+      <button class="tablinks" onclick="openCity(event, 'Add_Employee')">Add Employee</button>
+      <button class="tablinks" onclick="openCity(event, 'View')">View_Employee</button>
+      <button class="tablinks" onclick="openCity(event, 'Project_details')">Project details</button>
+      <button class="tablinks" onclick="openCity(event, 'Add_Task')">Add task</button>
+      <button class="tablinks" onclick="openCity(event, 'Add_Project')">Add Project</button>
     </div>
 
 <div id="Employee" class="tabcontent" >
@@ -160,6 +161,10 @@ dispEmp();
   dsfgjsdfd
   sfds
   dsf</p>
+</div>
+
+<div id="Add_Project" class="tabcontent">
+
 </div>
 
 <script>
