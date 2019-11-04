@@ -3,11 +3,11 @@
 <head>
 <title>PROJECT MANAGEMENT</title>
 <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
-<link href="css/bootstrap.css" rel="stylesheet"/>
+<link href="bootstrap.css" rel="stylesheet"/>
 
-<script src="js/bootstrap.js"></script>
+<script src="bootstrap.js"></script>
 <style type="text/css">
-body{background:url('image/b.jpg') no-repeat;
+body{background:url('b.jpg') no-repeat;
 	overflow-y:scroll;
 	}
 
@@ -32,7 +32,7 @@ label{font-size:20px; color:white;}
 			<form action="#" method="POST">
             <?php include('errors.php'); ?>
 					<h1> Login Form</h1>
-					<img class="img img-responsive img-circle" src="image/login.gif">
+					<img class="img img-responsive img-circle" src="login.gif">
 					<div class="form-group">
 						<input type="username" class="form-control" placeholder="Username" name="username">
 					</div>
